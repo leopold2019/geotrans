@@ -12,5 +12,6 @@
 return:string 
 example:{ "type": "MultiLineString", "coordinates": [ [ [ 101.859862859712493, 36.523079718151706 ], [ 101.859456035152945, 36.523369313600973 ] ] ] };
 { "type": "MultiLineString", "coordinates": [ [ [ 101.858121153728945, 36.523341793361269 ], [ 101.857713408838165, 36.52363062430571 ] ] ] };
+
 三、Note：
  相关依赖：GDAL  可参见该博客进行GDAL在vs2017中的配置 https://blog.csdn.net/xlp789/article/details/89521110
