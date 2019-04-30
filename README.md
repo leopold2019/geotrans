@@ -1,10 +1,12 @@
 # geotrans
 一、What can do?
+
  1.将3857坐标的wkt格式的polygon/multilinestring/linestring转为gcj-02的geojson格式的字符串
  
  2.将3857坐标的wkt格式的polygon/multilinestring/linestring转为bd-09的geojson格式的字符串 
 二、How to use?
  1. CoordsTrans.Trans_3857toGCJ02(string WKT);
+ 
  2. CoordsTrans.Trans_3857toBD09(string WKT);
  
  1)Parameter WKT:wkt format(polygon/multilinestring/linestring)
