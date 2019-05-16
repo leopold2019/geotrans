@@ -22,6 +22,7 @@
 
 三、Note：
  相关依赖：GDAL  可参见该博客进行GDAL在vs2017中的配置 https://blog.csdn.net/xlp789/article/details/89922762
+ 
 四、最近更新：
 
 将常用的投影坐标系统和地理坐标系统封装到epsg类中，需要用到的时候可以直接引用。
