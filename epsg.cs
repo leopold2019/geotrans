@@ -1,4 +1,6 @@
-   public class epsg
+namespace trans{
+   
+public class epsg
     {
         #region Xian 1980
         public static string gcs_4610 = "GEOGCS[\"Xian 1980\",    DATUM[\"Xian_1980\",        SPHEROID[\"IAG 1975\",6378140,298.257,            AUTHORITY[\"EPSG\",\"7049\"]],        AUTHORITY[\"EPSG\",\"6610\"]],    PRIMEM[\"Greenwich\",0,        AUTHORITY[\"EPSG\",\"8901\"]],    UNIT[\"degree\",0.0174532925199433,        AUTHORITY[\"EPSG\",\"9122\"]],    AUTHORITY[\"EPSG\",\"4610\"]]";
@@ -74,3 +76,4 @@
         #endregion
 
     }
+}
