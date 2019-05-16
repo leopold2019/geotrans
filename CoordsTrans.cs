@@ -11,8 +11,6 @@ namespace trans
 {
     public static class CoordsTrans
     {
-        const string wkt_3857 = "PROJCS[\"WGS 84 / Pseudo-Mercator\",GEOGCS[\"WGS 84\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563,AUTHORITY[\"EPSG\",\"7030\"]],AUTHORITY[\"EPSG\",\"6326\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4326\"]],PROJECTION[\"Mercator_1SP\"],PARAMETER[\"central_meridian\",0],PARAMETER[\"scale_factor\",1],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"X\",EAST],AXIS[\"Y\",NORTH],EXTENSION[\"PROJ4\",\"+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs\"],AUTHORITY[\"EPSG\",\"3857\"]]";
-        const string wkt_4326 = "GEOGCS[\"WGS 84\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563,AUTHORITY[\"EPSG\",\"7030\"]],AUTHORITY[\"EPSG\",\"6326\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4326\"]]";
         /// <summary>
         /// 对wkt格式的linestring、multilinestring和polygon从web墨卡托投影转换为适用于高德、腾讯的经纬度坐标（GCJ-02)
         /// </summary>
@@ -26,9 +24,9 @@ namespace trans
             {
                 Geometry polygon = Geometry.CreateFromWkt(wkt);
                 //定义数据源坐标系统
-                SpatialReference spa_3857 = new SpatialReference(wkt_3857);
+                SpatialReference spa_3857 = new SpatialReference(epsg.projcs_3857);
                 //定义目标坐标系统
-                SpatialReference spa_4326 = new SpatialReference(wkt_4326);
+                SpatialReference spa_4326 = new SpatialReference(epsg.gcs_4326);
                 polygon.AssignSpatialReference(spa_3857);
                 //将几何面从3857转为4326坐标
                 polygon.TransformTo(spa_4326);
